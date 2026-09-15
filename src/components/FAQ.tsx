@@ -1,0 +1,111 @@
+"use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Plus } from "lucide-react";
+import { AnimatedSection } from "./ui/AnimatedSection";
+
+const faqs = [
+  {
+    q: "Is FinWise a bank or a lender?",
+    a: "No. FinWise is not a bank, a lender, or a financial institution of any kind. We don't hold your money, offer loans, or provide any banking services. FinWise is a purely AI-powered financial intelligence tool that analyzes your existing financial data to help you understand, plan, and improve your financial health.",
+  },
+  {
+    q: "Is my financial data secure?",
+    a: "Your data is protected with bank-grade encryption (AES-256 at rest, TLS 1.3 in transit). We never sell your data, never share it with third parties for advertising, and never use it to offer you financial products. You're always in full control — you can delete your data at any time.",
+  },
+  {
+    q: "Do I need to connect my bank account?",
+    a: "Absolutely not. FinWise is designed to work without any bank connection. You can enter your financial information manually, or upload a PDF bank statement. No OAuth connections, no bank login credentials, no third-party data sharing required.",
+  },
+  {
+    q: "How accurate are FinWise's predictions?",
+    a: "FinWise's cash-flow forecasts achieve over 90% directional accuracy when based on at least 2 months of financial history. Predictions are based on your actual spending patterns and behavioral science models — not generic assumptions. The more data you provide, the more precise your forecast becomes.",
+  },
+  {
+    q: "Is FinWise free to use?",
+    a: "Yes! FinWise offers a free plan that includes your Financial Health Score, a basic 1-month cash-flow view, and 3 personalized recommendations. You can upgrade to Plus ($9/month) for the full 6-month forecast, risk alerts, PDF upload, and unlimited recommendations. A 14-day free trial of Plus is available — no credit card required.",
+  },
+  {
+    q: "What kinds of expenses can I track?",
+    a: "FinWise supports detailed expense categorization including fixed expenses (rent, utilities, subscriptions), groceries & food, transportation, shopping & lifestyle, entertainment & dining, healthcare, education, and more. You can also track multiple income sources and different types of debts including loans and credit card balances.",
+  },
+];
+
+function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ delay: index * 0.07, duration: 0.5 }}
+      className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
+        open ? "border-[#1C5DFD]/30 bg-[#1C5DFD]/[0.02]" : "border-slate-100 bg-white hover:border-[#1C5DFD]/20"
+      }`}
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between p-6 text-left group"
+        aria-expanded={open}
+      >
+        <span className={`text-base font-semibold pr-4 transition-colors ${open ? "text-[#1C5DFD]" : "text-[#1A1A2E] group-hover:text-[#1C5DFD]"}`}>
+          {faq.q}
+        </span>
+        <motion.div
+          animate={{ rotate: open ? 45 : 0 }}
+          transition={{ duration: 0.25 }}
+          className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+            open ? "bg-[#1C5DFD]/10 text-[#1C5DFD]" : "bg-slate-100 text-[#5C6B7A]"
+          }`}
+        >
+          <Plus className="w-4 h-4" />
+        </motion.div>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <div className="px-6 pb-6 text-[#5C6B7A] leading-relaxed text-sm border-t border-slate-100 pt-4">
+              {faq.a}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
+export function FAQ() {
+  return (
+    <section id="faq" className="section-padding relative overflow-hidden bg-white">
+      <div className="max-w-4xl mx-auto">
+        <AnimatedSection className="text-center mb-16">
+          <div className="badge-brand mb-6 mx-auto w-fit">FAQ</div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E] tracking-tight mb-5">
+            Frequently asked{" "}
+            <span className="gradient-text">questions</span>
+          </h2>
+          <p className="text-lg text-[#5C6B7A]">
+            Have a question? We've got answers. Or reach us at{" "}
+            <a href="mailto:hello@finwise.ai" className="text-[#1C5DFD] hover:underline">
+              hello@finwise.ai
+            </a>
+          </p>
+        </AnimatedSection>
+
+        <div className="space-y-3">
+          {faqs.map((faq, i) => (
+            <FAQItem key={faq.q} faq={faq} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

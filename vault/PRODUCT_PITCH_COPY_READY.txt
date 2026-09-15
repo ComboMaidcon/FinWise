@@ -1,0 +1,195 @@
+FINSIGHT - BẢN MÔ TẢ SẢN PHẨM COPY-READY
+
+
+4. CÁC NĂNG LỰC CỐT LÕI
+
+Các năng lực cốt lõi:
+
+- Financial Health Score: một điểm số tổng quan thể hiện sức khỏe tài chính.
+- Cash Flow Analysis: phân tích thu nhập, chi tiêu, nợ và phần tiền còn lại mỗi tháng.
+- Predictive Cash-Flow Forecast: định hướng dự báo dòng tiền 6-12 tháng.
+- Risk Alerts: cảnh báo sớm rủi ro như thiếu hụt dòng tiền, tỷ lệ nợ tăng hoặc thiếu quỹ khẩn cấp.
+- Personalized Action Plan: đề xuất hành động cụ thể thay vì lời khuyên chung chung.
+- Goal Planning: lập kế hoạch theo mục tiêu tài chính cá nhân.
+- Privacy-first Input: cho phép nhập thủ công, định hướng hỗ trợ tải lên bản PDF của sao kê tài chính mà không yêu cầu kết nối tài khoản ngân hàng.
+
+
+5. TRẠNG THÁI SẢN PHẨM HIỆN TẠI
+
+- Luồng nhập dữ liệu gồm 5 bước: profile, income, expenses, debts, goals.
+- Màn hình kết quả demo gồm Financial Health Score, monthly cash flow và top recommendations.
+
+
+8. KẾT QUẢ ĐẦU RA VÀ GIÁ TRỊ NGƯỜI DÙNG NHẬN ĐƯỢC
+
+FinSight không chỉ hiển thị biểu đồ. Sản phẩm hướng tới việc biến dữ liệu thành quyết định.
+
+
+Financial Health Score
+
+Điểm số giúp người dùng có một chỉ báo đơn giản để biết mình đang ở đâu. Trong demo hiện tại, score được tính chủ yếu dựa trên savings rate và cash flow. Trong sản phẩm thật, score nên mở rộng thành mô hình đa yếu tố gồm:
+
+- Income stability.
+- Spending discipline.
+- Debt burden.
+- Savings rate.
+- Emergency buffer.
+- Goal progress.
+- Cash-flow volatility.
+
+
+Cash Flow View
+
+Người dùng thấy rõ:
+
+- Tổng thu nhập.
+- Tổng chi tiêu và nghĩa vụ trả nợ.
+- Số tiền còn lại hoặc thiếu hụt.
+
+
+Risk Alerts
+
+Nếu cash flow âm hoặc rủi ro tăng, FinSight cảnh báo sớm để người dùng không chỉ phát hiện vấn đề sau khi đã quá muộn.
+
+Ví dụ:
+
+- "Bạn đang chi nhiều hơn thu nhập."
+- "Chi tiêu giải trí và shopping đang cao so với mức thu nhập."
+- "Tỷ lệ trả nợ hàng tháng đang ảnh hưởng khả năng tiết kiệm."
+
+
+Action Plan
+
+FinSight cần đưa ra hành động cụ thể, đo được và có thể làm ngay.
+
+Ví dụ:
+
+- Giảm discretionary spending trong tháng này.
+- Tự động chuyển một phần cash flow dương sang tài khoản tiết kiệm.
+- Ưu tiên trả khoản nợ có lãi suất cao.
+- Xây dựng quỹ khẩn cấp 3 tháng trước khi mở rộng mục tiêu khác.
+
+Đây là điểm khác biệt quan trọng so với app chỉ tracking.
+
+
+11. MÔ HÌNH KINH DOANH
+
+FinSight có thể đi theo mô hình freemium SaaS cho người dùng cá nhân.
+
+
+Free
+
+Mục tiêu: giảm rào cản trải nghiệm và tạo funnel người dùng.
+
+Tính năng phù hợp:
+
+- Financial Health Score cơ bản.
+- Cash-flow view ngắn hạn.
+- Manual data entry.
+- Một số khuyến nghị giới hạn.
+- Một mục tiêu tài chính.
+
+
+Plus
+
+Mục tiêu: chuyển đổi người dùng có nhu cầu nghiêm túc hơn.
+
+Tính năng phù hợp:
+
+- Dự báo 6 tháng.
+- Risk alerts.
+- PDF/CSV upload.
+- Khuyến nghị không giới hạn.
+- Goal roadmap (Mỗi tháng cần dành bao nhiêu tiền để đạt mục tiêu tài chính?).
+- Báo cáo hàng tháng.
+
+
+Premium
+
+Mục tiêu: phục vụ power users hoặc người có tài chính phức tạp hơn.
+
+Tính năng phù hợp:
+
+- Dự báo 12 tháng.
+- Scenario planning.
+- Multi-income modeling (Phân tích theo nhiều nguồn thu).
+- Debt payoff optimizer.
+- Weekly AI coaching.
+- Ưu tiên hỗ trợ.
+
+
+Vì sao mô hình này hợp lý?
+
+- Người dùng có thể thấy giá trị trước khi trả tiền.
+- Tính năng trả phí gắn với kết quả có giá trị cao hơn: dự báo, cảnh báo, tự động hóa và coaching.
+- Không phụ thuộc vào việc bán dữ liệu hoặc bán sản phẩm tài chính, giúp củng cố niềm tin.
+
+
+12. LỢI THẾ CẠNH TRANH
+
+FinSight không cạnh tranh bằng việc trở thành app ghi chép chi tiêu rẻ hơn. Lợi thế nằm ở cách chuyển từ tracking sang intelligence.
+
+Các điểm khác biệt:
+
+- Tập trung vào tương lai, không chỉ quá khứ.
+- Không yêu cầu bank login.
+- Kết hợp score, forecast, risk alerts và action plan trong một trải nghiệm.
+- Phù hợp với người có thu nhập biến động như freelancer.
+- Thiết kế sản phẩm giải thích được vấn đề và hành động cần làm, thay vì chỉ đưa biểu đồ.
+- Định vị privacy-first, tránh mô hình kiếm tiền bằng bán dữ liệu hoặc cross-sell sản phẩm tài chính.
+
+
+13. ROADMAP PHÁT TRIỂN
+
+Thay vì chỉ phục vụ người dùng cuối qua website hoặc ứng dụng riêng, FinSight sẽ phát triển một bộ public API để doanh nghiệp có thể tích hợp trực tiếp năng lực phân tích tài chính cá nhân vào sản phẩm của họ.
+
+
+Khách hàng B2B mục tiêu
+
+- Ngân hàng số và ví điện tử.
+- Công ty bảo hiểm.
+- Nền tảng payroll.
+- Công ty HR benefits.
+- Trường đại học hoặc tổ chức giáo dục.
+- Doanh nghiệp lớn muốn cung cấp phúc lợi tài chính cho nhân viên.
+- Các fintech muốn có scoring engine và recommendation engine mà không phải tự xây dựng từ đầu.
+
+
+Public API sẽ cung cấp
+
+- Financial Health Score.
+- Cash-flow risk signal.
+- Debt insight.
+- Savings recommendation.
+- Spending pattern.
+- Goal progress.
+- Personalized action plan.
+
+Với public API, đối tác có thể gửi dữ liệu tài chính đã được người dùng đồng ý chia sẻ, sau đó nhận lại kết quả phân tích để hiển thị trực tiếp trong dashboard, mobile app hoặc hệ thống nội bộ của họ.
+
+
+Hạ tầng hỗ trợ doanh nghiệp
+
+- Developer portal.
+- Sandbox environment.
+- API documentation.
+- API key management.
+- OAuth/SSO.
+- Webhook cho cảnh báo rủi ro.
+- SDK cho các framework phổ biến.
+- Rate limiting.
+- Audit log.
+- Tenant-based access control.
+- Dashboard quản trị.
+- Báo cáo usage.
+- Các gói SLA theo nhu cầu bảo mật, hiệu năng và tuân thủ dữ liệu.
+
+
+Mô hình doanh thu B2B
+
+- Phí nền tảng hàng tháng.
+- Phí theo số lượng active users.
+- Phí theo số lượng API calls.
+- Gói enterprise tùy chỉnh cho các đối tác lớn.
+
+Chiến lược này giúp FinSight không chỉ là một ứng dụng tài chính cá nhân, mà trở thành lớp hạ tầng financial intelligence có thể được nhúng vào nhiều hệ sinh thái khác nhau. Cách mở rộng này giúp sản phẩm tăng quy mô nhanh hơn, giảm phụ thuộc vào chi phí acquisition B2C và tạo nguồn doanh thu ổn định hơn từ khách hàng doanh nghiệp.

@@ -1,0 +1,357 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand core */
+  --color-brand-primary: #1C5DFD;
+  --color-brand-secondary: #519FFA;
+  --color-brand-muted: #6590BA;
+  --color-brand-navy: #517292;
+  --color-brand-tint: #C9E2FB;
+
+  /* Backgrounds */
+  --color-bg-base: #F2F2F2;
+  --color-bg-soft: #FAFCFE;
+  --color-bg-white: #FFFFFF;
+
+  /* Text */
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #5C6B7A;
+  --color-text-on-brand: #FFFFFF;
+
+  /* State */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+}
+
+/* ─── Keyframes ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes gradient-text {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(28, 93, 253, 0.2); }
+  50% { box-shadow: 0 0 0 12px rgba(28, 93, 253, 0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes dash {
+  0% { stroke-dashoffset: 220; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── Base Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #FAFCFE;
+  color: #1A1A2E;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F2F2F2; }
+::-webkit-scrollbar-thumb { background: rgba(28, 93, 253, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(28, 93, 253, 0.5); }
+
+/* ─── Glass / Card Utilities (Light Mode) ─── */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(28, 93, 253, 0.08);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(28, 93, 253, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(28, 93, 253, 0.08);
+  box-shadow: 0 8px 24px rgba(28, 93, 253, 0.07), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ─── Gradient Text ─── */
+.gradient-text {
+  background: linear-gradient(135deg, #1C5DFD 0%, #519FFA 60%, #5EA7FD 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text 5s ease infinite;
+}
+
+/* ─── Background Graphic Elements ─── */
+
+/* Wave shape stripes (SVG-based via data URI, layered CSS) */
+.bg-wave {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.15;
+}
+
+/* Concentric circle decoration */
+.bg-circles {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+/* Dot grid pattern */
+.bg-dots {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0.2;
+  background-image: radial-gradient(circle, #6590BA 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+/* ─── Orbs (brand-tinted, light) ─── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.orb-blue {
+  background: radial-gradient(circle, rgba(28, 93, 253, 0.18) 0%, transparent 70%);
+}
+
+.orb-tint {
+  background: radial-gradient(circle, rgba(201, 226, 251, 0.6) 0%, transparent 70%);
+}
+
+.orb-muted {
+  background: radial-gradient(circle, rgba(101, 144, 186, 0.2) 0%, transparent 70%);
+}
+
+/* ─── Section Layout ─── */
+.section-padding {
+  padding: 120px 24px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 20px;
+  }
+}
+
+.bg-gradient-hero {
+  background:
+    radial-gradient(ellipse at 10% 30%, rgba(28, 93, 253, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 10%, rgba(94, 167, 253, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 90%, rgba(201, 226, 251, 0.4) 0%, transparent 50%),
+    #FAFCFE;
+}
+
+.bg-gradient-section {
+  background: linear-gradient(180deg, #FAFCFE 0%, #F2F2F2 50%, #FAFCFE 100%);
+}
+
+/* ─── Button Styles ─── */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: #1C5DFD;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(28, 93, 253, 0.3);
+  border: none;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #519FFA, #1C5DFD);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(28, 93, 253, 0.45);
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-primary span,
+.btn-primary svg {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: rgba(28, 93, 253, 0.06);
+  color: #1C5DFD;
+  border: 1.5px solid rgba(28, 93, 253, 0.2);
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(28, 93, 253, 0.12);
+  border-color: rgba(28, 93, 253, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ─── Card Hover ─── */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(28, 93, 253, 0.12);
+}
+
+/* ─── Input Styles ─── */
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1.5px solid #E0E8F5;
+  border-radius: 10px;
+  color: #1A1A2E;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-field:focus {
+  background: #FFFFFF;
+  border-color: #1C5DFD;
+  box-shadow: 0 0 0 3px rgba(28, 93, 253, 0.1);
+}
+
+.input-field::placeholder {
+  color: #9EAABF;
+}
+
+.currency-input:focus::placeholder {
+  color: transparent;
+}
+
+select.input-field option {
+  background-color: #FFFFFF;
+  color: #1A1A2E;
+}
+
+/* ─── Label ─── */
+.input-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5C6B7A;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ─── Divider ─── */
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(28, 93, 253, 0.25), transparent);
+}
+
+/* ─── Badge / Pill ─── */
+.badge-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, rgba(28, 93, 253, 0.08), rgba(94, 167, 253, 0.1));
+  border: 1px solid rgba(28, 93, 253, 0.15);
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1C5DFD;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Floating Animation ─── */
+.float-1 { animation: float 6s ease-in-out infinite; }
+.float-2 { animation: float-delayed 7s ease-in-out infinite; }
+
+/* ─── Shimmer ─── */
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(28, 93, 253, 0.06) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ─── Custom scrollbar (forms) ─── */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #F2F2F2; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(28, 93, 253, 0.25); border-radius: 2px; }

@@ -1,0 +1,29 @@
+{
+  "name": "FinWise — AI Financial Intelligence",
+  "short_name": "FinWise",
+  "description": "FinWise analyzes your income, spending, and debt to diagnose your financial health, predict cash-flow risks, and guide you with a personalized action plan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EFF4FD",
+  "theme_color": "#1C5DFD",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

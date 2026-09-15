@@ -26,6 +26,16 @@ export const metadata: Metadata = {
       "AI-powered financial health diagnosis, cash-flow predictions, and personalized action plans.",
     type: "website",
   },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/icon-192.png",
+    apple: "/icon-192.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "FinWise",
+  },
 };
 
 export default function RootLayout({
